@@ -6,6 +6,33 @@ window.addEventListener('load', () => {
    }, 1000);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.querySelector('.intro-cta-primary');
+    const inputSection = document.querySelector('#input-section');
+
+    if (startButton && inputSection) {
+        startButton.addEventListener('click', () => {
+            // Scroll to the input section
+            inputSection.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+
+            // Optional: Focus the textarea automatically after scrolling
+            const textarea = inputSection.querySelector('textarea');
+            setTimeout(() => textarea.focus(), 800);
+        });
+    }
+    
+    const donateButton = document.querySelector('.intro-cta-secondary');
+    
+    if (donateButton) {
+        donateButton.addEventListener('click', () => {
+            window.open('https://ezdn.app/Phattaraphan', '_blank');
+        });
+    }
+});
+
 // Menu Item Click Handler
 const menuItems = document.querySelectorAll('.menu-item');
 const contentSections = document.querySelectorAll('.content-section');
