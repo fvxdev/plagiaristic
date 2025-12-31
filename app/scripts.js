@@ -7,12 +7,11 @@ window.addEventListener('load', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const startButton = document.querySelector('.intro-cta-primary');
-    const inputSection = document.querySelector('#input-section');
+   const startButton = document.querySelector('.intro-cta-primary');
+   const inputSection = document.querySelector('#input-section');
 
-    if (startButton && inputSection) {
-        startButton.addEventListener('click', () => {
-            // Scroll to the input section
+   if (startButton && inputSection) {
+         startButton.addEventListener('click', () => {
             inputSection.scrollIntoView({ 
                 behavior: 'smooth', 
                 block: 'center' 
@@ -22,15 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const textarea = inputSection.querySelector('textarea');
             setTimeout(() => textarea.focus(), 800);
         });
-    }
-    
-    const donateButton = document.querySelector('.intro-cta-secondary');
-    
-    if (donateButton) {
-        donateButton.addEventListener('click', () => {
-            window.open('https://ezdn.app/Phattaraphan', '_blank');
-        });
-    }
+   }
 });
 
 // Menu Item Click Handler
